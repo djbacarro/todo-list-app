@@ -17,23 +17,25 @@ h2{
 
 .container {
     background-color: #3c0302 ;
-    margin: 20px;
+    margin: 20px auto;
     padding: 20px;
     border-radius: 15px;
+    width:50%;
+    max-width:600px;
 }
 
 input {
-    padding: 10px;
-    width: 50%;
-    border-radius: 10px;
+    padding: 13px;
+    width: 63%;
+    border-radius: 13px;
 }
 
 button{
-    padding: 10px;
+    padding: 13px;
     background-color: #bed1db ;
     color: #3c0302;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 13px;
 }
 
 ul {
@@ -51,7 +53,7 @@ li{
     background-color: #bed1db;
     padding: 12px;
     margin-bottom: 15px;
-    border-radius: 15px;
+    border-radius: 17px;
     overflow-wrap: anywhere;
     margin-left: 50px;
     margin-right: 50px;
@@ -81,5 +83,4 @@ li button{
     font-size: 14px;
     cursor: pointer;
     padding: 5px;
-
 }
