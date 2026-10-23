@@ -11,13 +11,20 @@ addButton.addEventListener("click", function() {
         checkbox.type = "checkbox";
         const taskTextSpan = document.createElement("span");
         taskTextSpan.textContent = taskText;
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "🗑️";
 
         checkbox.addEventListener("change", function() {
             taskTextSpan.classList.toggle("completed", checkbox.checked);
         });
 
+        deleteButton.addEventListener("click", function() {
+            taskList.removeChild(listItem);
+        });
+
         listItem.appendChild(checkbox);
         listItem.appendChild(taskTextSpan);
+        listItem.appendChild(deleteButton);
         taskList.appendChild(listItem);
         taskInput.value = "";
     }
