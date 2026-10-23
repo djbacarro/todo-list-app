@@ -1,13 +1,18 @@
+
 const taskInput = document.getElementById("taskInput");
 const addButton = document.getElementById("addButton");
 const taskList = document.getElementById("taskList");
 
-addButton.addEventListener("click", function(){
-    const  taskText = taskInput.value.trim();
+addButton.addEventListener("click", function() {
+    const taskText = taskInput.value.trim();
 
     if (taskText !== "") {
         const listItem = document.createElement("li");
         listItem.textContent = taskText;
+
+        listItem.addEventListener("click", function() {
+            listItem.classList.toggle("completed");
+        });
 
         taskList.appendChild(listItem);
         taskInput.value = "";
