@@ -1,4 +1,3 @@
-
 const taskInput = document.getElementById("taskInput");
 const addButton = document.getElementById("addButton");
 const taskList = document.getElementById("taskList");
@@ -8,12 +7,17 @@ addButton.addEventListener("click", function() {
 
     if (taskText !== "") {
         const listItem = document.createElement("li");
-        listItem.textContent = taskText;
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        const taskTextSpan = document.createElement("span");
+        taskTextSpan.textContent = taskText;
 
-        listItem.addEventListener("click", function() {
-            listItem.classList.toggle("completed");
+        checkbox.addEventListener("change", function() {
+            taskTextSpan.classList.toggle("completed", checkbox.checked);
         });
 
+        listItem.appendChild(checkbox);
+        listItem.appendChild(taskTextSpan);
         taskList.appendChild(listItem);
         taskInput.value = "";
     }

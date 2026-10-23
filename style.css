@@ -46,6 +46,7 @@ ul {
 }
 
 li{
+    display: flex;
     background-color: #bed1db;
     padding: 12px;
     margin-bottom: 15px;
@@ -55,6 +56,19 @@ li{
     margin-right: 50px;
 }
 
-li.completed {
+input[type="checkbox"] {
+    width:18px;
+    height:18x;
+    accent-color:#3c0302;
+    cursor:pointer;
+    flex-shrink:0;
+}
+
+li span{
+    flex: 10;
+    overflow-wrap:anywhere;
+}
+
+li span.completed{
     text-decoration: line-through;
 }
